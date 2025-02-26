@@ -1,0 +1,142 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    flex-direction: column;
+}
+/* Estilo do menu */
+.menu {
+    width: 100%;
+    height:50px;
+    background-color: #212529;
+}
+
+.menu nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.menu nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.menu nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #212529;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu nav ul li a:hover {
+    background-color: #45a049;
+}
+
+
+/* Cabeçalho com logo */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#logo-ong {
+    width: 250px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+/* Estilo do menu */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color:#212529;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Contêiner principal */
+.container {
+    width: 80%;
+    margin-top:50px;
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Estilos das seções */
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="date"], select, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color:#212529;
+    color: white;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f4f4;
+}

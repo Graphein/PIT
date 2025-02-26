@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Projetos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo-ong.png" alt="Logo da ONG" id="logo-ong">
+    </header>
+    <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="#">Planeta Verde</a></li>
+                <li><a href="#">Doador</a></li>
+                <li><a href="#">Doação</a></li>
+                <li><a href="#">Projeto</a></li>
+                <li><a href="#">Atividade</a></li>
+                <li><a href="#">Pedido</a></li>
+                <li><a href="#">Registro de Despesas</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <!-- Menu de navegação -->
+        <h1>Gerenciar Projetos</h1>
+        <nav>
+            <button id="btn-gerenciar" onclick="showSection('gerenciar')">Gerenciar Projetos</button>
+            <button id="btn-buscar" onclick="showSection('buscar')">Buscar Projeto</button>
+        </nav>
+
+        <!-- Seção Gerenciar Projetos -->
+        <div id="gerenciar" class="section active">
+            <!-- Nova seção para exibir detalhes do projeto em edição -->
+            <div id="projeto-atual" style="display: none; margin-bottom: 20px;">
+                <h3>Editar Projeto: <span id="projeto-nome"></span></h3>
+                <p><strong>Descrição:</strong> <span id="projeto-descricao"></span></p>
+                <p><strong>Data de Início:</strong> <span id="projeto-data"></span></p>
+                <p><strong>Status:</strong> <span id="projeto-status"></span></p>
+            </div>
+
+            <!-- Formulário de Gerenciar Projetos -->
+            <form id="form-gerenciar-projetos">
+                <input type="text" id="nome" placeholder="Nome do Projeto" required />
+                <textarea id="descricao" placeholder="Descrição"></textarea>
+                <input type="date" id="data_inicio" required />
+                <select id="status">
+                    <option value="Ativo">Ativo</option>
+                    <option value="Concluído">Concluído</option>
+                </select>
+                <button type="submit">Salvar</button>
+            </form>
+
+            <!-- Tabela de Projetos -->
+            <table id="tabela-projetos">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Data de Início</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Seção Buscar Projeto -->
+        <div id="buscar" class="section">
+            <h1>Buscar Projeto</h1>
+            <form id="form-buscar-projetos">
+                <input type="text" id="buscar-nome" placeholder="Digite o nome do projeto" oninput="buscarProjetos()" />
+            </form>
+            <table id="tabela-busca-projetos">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Data de Início</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
