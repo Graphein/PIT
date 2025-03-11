@@ -11,7 +11,7 @@ const LoginPage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     // Aqui você pode adicionar a lógica de autenticação real
-    if (username === "admin" && password === "senha") {
+    if (username === "admin" && password === "admin") {
       // Redireciona para a página inicial (ou onde for necessário após o login)
       navigate("/");
     } else {

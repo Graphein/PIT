@@ -1,15 +1,21 @@
-import "../styles/LoginPage.css"; // Importando o CSS
+import "../styles/LoginPage.css";
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
-    // Aqui você pode adicionar a lógica para autenticar o usuário
+    // Simulando autenticação
+    if (email === "grpheinleli@gmail.com" && password === "123") {
+      localStorage.setItem('token', 'token123'); // Token fictício
+      navigate('/Voluntarios');
+    } else {
+      alert('Email ou senha incorretos');
+    }
   };
 
   return (
